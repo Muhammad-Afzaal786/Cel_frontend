@@ -6,7 +6,7 @@ const OurCookiesPolicies = () => {
   return (
     <div className={styles.cookiesPolicyContainer}>
       <div className={styles.cookiesPlicyWrapper1}>
-        <h2>Politique d’utilisation des cookies</h2>
+        <h2>Politique d’utilisation des cookies</h2> 
 
         <p>
           Nos partenaires et nous-mêmes utilisons différentes technologies,
