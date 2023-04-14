@@ -71,6 +71,26 @@ const SigninForm = (props) => {
         setInputError(error.response.data.input);
         setIsLoading(false);
       });
+
+              // // Make an HTTP request to get the user data
+              // const response = await fetch("http://localhost:3004/user");
+              // const data = await response.json();
+          
+              // // Check the credentials against the user data
+              // const user = data.find(
+              //   (user) => user.email === email && user.password === password
+              // );
+          
+              // if (user) {
+              //   // Set the user as logged in and redirect to the dashboard
+              //   // setIsLoggedIn(true);
+              //   // navigate("/");
+              //   router.push('/');
+              // } else {
+              //   // Display an error message if the credentials are incorrect
+              //   // setError("Incorrect username or password");
+              //   console.log("Incorrect username or password")
+              // }
   };
   //
   const [passwordShown, setPasswordShown] = useState(false);

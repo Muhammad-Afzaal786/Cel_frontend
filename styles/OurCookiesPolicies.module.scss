@@ -1,0 +1,52 @@
+.cookiesPolicyContainer {
+  padding-top: 40px;
+  margin-left: 10vw;
+}
+
+.cookiesPlicyWrapper1 {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 20%;
+  margin-top: 20px;
+
+  h2 {
+    color: #01989f;
+    padding-bottom: 50px;
+    font-size: 24px;
+  }
+
+  p {
+    text-align: start;
+  }
+
+  .cookiesPolicy {
+    border: 1px solid black;
+    padding: 20px;
+    text-align: start;
+    margin-top: 50px;
+  }
+}
+
+.cookiesPlicyWrapper2 {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 20%;
+  margin-top: 20px;
+
+  h2 {
+    color: #191919;
+    padding-bottom: 50px;
+    font-size: 18px;
+  }
+
+  p {
+    text-align: start;
+  }
+
+  .cookiesPolicy {
+    border: 1px solid black;
+    padding: 20px;
+    text-align: start;
+    margin-top: 50px;
+  }
+}

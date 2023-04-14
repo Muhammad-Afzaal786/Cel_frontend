@@ -68,3 +68,82 @@ div[id$="listbox"]{
   @media only screen and (max-width: 767px) and (orientation: portrait) {
   /* smartphone en mode portait */
   }
+
+
+  // Mukhtar
+
+  .Dashboard-header {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.Dashboard-policies-popup-body {
+  padding-inline: 20px !important;
+}
+
+.modal-header {
+  .modal-title {
+    color: #01989f;
+  }
+  button {
+    background: none;
+    border: none;
+
+    span {
+      color: #01989f;
+      font-size: 22px;
+    }
+  }
+}
+
+.modal-links {
+  border-bottom: 1px solid blue;
+  color: blue;
+  cursor: pointer;
+}
+
+.cookies-border-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    border: 1px solid black;
+    width: 70%;
+    padding: 10px;
+  }
+
+  .cookies-toggle {
+    padding-right: 50px;
+  }
+}
+
+.cookies-borderless-section {
+  .headings {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.modal-button-cancel,
+.modal-button-accept {
+  border-radius: 10px;
+  border: 2px solid #01989f;
+  padding: 5px 10px;
+}
+
+.modal-button-cancel {
+  background: none;
+  color: #01989f;
+}
+
+.modal-button-accept {
+  background: #01989f;
+  color: white;
+}
+
+:where(.css-dev-only-do-not-override-htwhyh).ant-switch.ant-switch-checked {
+  background-color: #01989f !important;
+}
