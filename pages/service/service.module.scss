@@ -1,0 +1,128 @@
+
+.mainWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+  
+}
+
+.searchbar{
+  width: 100%;
+  border: solid 1px rgba(25, 25, 25, 0.16);
+  border-radius: 5px;
+  padding: 10px 10px;
+  background-color: white;
+ 
+}
+.Rectangle {
+
+    width: 100px;
+    height: 32px;
+    margin: 0 20px 0 0;
+    padding: 8px 12px 10px;
+    border-radius: 16px;
+    border: solid 1.5px #d5d5d5;
+  }
+  .Ce_jour {
+    width: 50px;
+    height: 14px;
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    color: #d5d5d5;
+  }
+  .btn_wrapper{
+    display: flex;
+    justify-content: center;
+   
+    & Button{
+        border: solid 1.5px #d5d5d5;
+        color:#d5d5d5 ;
+        margin: 0rem 1rem;
+        font-size: 1rem;
+        padding: .5rem 1rem;
+        border-radius: 50px;
+        &:hover{
+            background-color: #00565b !important;
+            color: white;
+        }
+    }
+  }
+  .mainTabWrapper{
+    margin-top: 3rem;
+    
+    border-radius: 10px;
+    background-color: white;
+    padding: 2rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    .tabOne{
+      
+         .nested_TabOne{
+            display: flex;
+            justify-content: space-between;
+           
+            h4{
+                color: #01989f;
+            }
+           
+            h5{
+                color: grey;
+            }
+         }
+         p{
+            color: grey;
+            font-size: 1rem;
+        }
+        .tab_icons{
+           display: flex;
+          justify-content: space-between;
+          padding-top:  1rem;
+
+           .img_icons{
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+           }
+           .content_icons{
+            span{
+                font-weight: 700;
+                color: black;
+            }
+           }
+        }
+        .reaction_icons{
+          display: flex;
+          align-items: center;
+          line-height: 10px;
+          padding: 5px 5px;
+          border:1px solid rgba(25, 25, 25, 0.12);
+          border-radius: 50px;
+          background-color: #f6f6f6;
+          position: absolute;
+          right: 0;
+          top: 110%;
+          span{
+            margin: 0px 5px;
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            &:hover{
+              background-color: rgba(213, 213, 213, 0.72);
+              padding: 0px 5px;
+              border-radius: 50px;
+              transform: scale(1.1);
+            }
+            small{
+              font-size: 14px;
+              font-weight: 600;
+            }
+          }
+        }
+    }
+  }
