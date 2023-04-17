@@ -1,56 +1,56 @@
-@import './tools/reset', './tools/fonts', './tools/colors';
+@import "./tools/reset", "./tools/fonts", "./tools/colors";
 
 @font-face {
-  font-family: 'Menlo Regular';
+  font-family: "Menlo Regular";
   font-style: normal;
   font-weight: normal;
-  src: local('Menlo Regular'), url('/assets/fonts/Menlo-Regular.woff') format('woff');
-  }
+  src: local("Menlo Regular"),
+    url("/assets/fonts/Menlo-Regular.woff") format("woff");
+}
 
-*{
+* {
   font-family: $font;
 }
-.BodyPartSelectContainer{
+.BodyPartSelectContainer {
   background-color: rgba(0, 0, 0, 0.05) !important;
   // border-color: purple !important;
 }
-body{
-  max-width:100vw;
+body {
+  max-width: 100vw;
   background-color: $background;
 }
-.searchContainer{
+.searchContainer {
   height: 18vh;
   border: 2px solid blue;
 }
-.iconToggleMenu{
-  path{
+.iconToggleMenu {
+  path {
     fill: white;
   }
 }
-.annonce{
+.annonce {
   @include basics;
   font-size: $story-title-desktop;
-  color:  $red;
+  color: $red;
   width: 100%;
   text-align: center;
 }
 // CreateStoryForm indication fieldset1
-.pourEtrePublie{
-font-family: $font2 !important;
-// color: red;
+.pourEtrePublie {
+  font-family: $font2 !important;
+  // color: red;
 }
 
-div[id$="listbox"]{
+div[id$="listbox"] {
   border: 1px solid $dark-green-2;
   position: absolute;
   top: 40px;
   left: 0;
   right: 0;
   z-index: 99;
-  div[class$="-MenuList"]{
-
-    div[class$="-option"]{
-      &:hover{
+  div[class$="-MenuList"] {
+    div[class$="-option"] {
+      &:hover {
         color: white;
         background-color: $dark-green-2;
       }
@@ -60,19 +60,17 @@ div[id$="listbox"]{
 
 @media only screen and (min-width: 768px) {
   /* tablettes et ordinateurs */
-  }
-  @media only screen and (max-width: 767px) {
+}
+@media only screen and (max-width: 767px) {
   /* smartphone */
-
-  }
-  @media only screen and (max-width: 767px) and (orientation: portrait) {
+}
+@media only screen and (max-width: 767px) and (orientation: portrait) {
   /* smartphone en mode portait */
-  }
+}
 
+// Mukhtar
 
-  // Mukhtar
-
-  .Dashboard-header {
+.Dashboard-header {
   padding-top: 20px;
   display: flex;
   justify-content: space-around;

@@ -17,7 +17,7 @@
   }
   
   html { 
-      font-size: 62.5%; 
+      // font-size: 62.5%; 
       line-height: 1.618;
   }
   
@@ -34,13 +34,17 @@
   ul {
     list-style-type: none;
   }
+
+  p {
+    margin: 0 !important;
+  }
   
   h1,
   h2,
   h3,
   h4,
   h5 {
-    font-size: inherit;
+    // font-size: inherit;
     font-weight: inherit;
     line-height: inherit;
   }

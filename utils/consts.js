@@ -1,5 +1,5 @@
 export const BACKEND_URL =
-  process.env.NEXT_PUBLIC_BACKEND_URL || 'http://10.10.50.49:5005/api';
+  process.env.NEXT_PUBLIC_BACKEND_URL || 'http://10.10.50.231:5005/api';
 
 export const IMAGEKIT_URL_ENDPOINT =
   process.env.NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT ||
@@ -11,7 +11,7 @@ export const IMAGEKIT_PUBLIC_KEY =
 
 export const IMAGEKIT_AUTH_ENDPOINT =
   process.env.NEXT_PUBLIC_IMAGEKIT_AUTH_ENDPOINT ||
-  'http://10.10.50.49:5005/api/auth/imagekit';
+  'http://10.10.50.231:5005/api/auth/imagekit';
 
 export const MONGODB_URI_DEV = process.env.MONGODB_URI_DEV;
 export const MONGODB_URI = process.env.MONGODB_URI;

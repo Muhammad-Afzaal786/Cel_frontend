@@ -88,16 +88,16 @@ export default function Home({ posts }) {
           </a>
         </ModalBody>
         <ModalFooter>
-          <Button
-            color="secondary"
+          <button
             type="button"
+            className="modal-button-cancel"
             onClick={() => setModalOpen(!modalOpen)}
           >
             Paramètre
-          </Button>
-          <Button color="primary" type="button">
+          </button>
+          <button className="modal-button-accept" type="button">
             Tout accepter
-          </Button>
+          </button>
         </ModalFooter>
       </Modal>
 
@@ -287,16 +287,16 @@ export default function Home({ posts }) {
   );
 }
 
-export async function getStaticProps() {
-  const res = await axios.get(`${BACKEND_URL}/story/`);
-  const posts = await res.data;
-  return {
-    props: {
-      posts,
-    },
-    // Next.js will attempt to re-generate the page:
-    // - When a request comes in
-    // - At most once every 120 seconds
-    revalidate: 10, // In seconds
-  };
-}
+// export async function getStaticProps() {
+//   const res = await axios.get(`${BACKEND_URL}/story/`);
+//   const posts = await res.data;
+//   return {
+//     props: {
+//       posts,
+//     },
+//     // Next.js will attempt to re-generate the page:
+//     // - When a request comes in
+//     // - At most once every 120 seconds
+//     revalidate: 10, // In seconds
+//   };
+// }

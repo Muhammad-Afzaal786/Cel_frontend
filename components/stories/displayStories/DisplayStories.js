@@ -35,7 +35,7 @@ const DisplayStories = ({ stories, cssBreakPoint }) => {
           ' ' +
           `${cssBreakPoint === 'desktop' ? styles.desktop : ''}`
         }>
-        {stories.slice(0, visible).map((story) => {
+        {/* {stories.slice(0, visible).map((story) => {
           const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
           // ajout d'une clé à l'objet story pour une variante d'affichage css
           story.proIsAlone =
@@ -151,7 +151,7 @@ const DisplayStories = ({ stories, cssBreakPoint }) => {
               />
             </div>
           );
-        })}
+        })} */}
         <button className={styles.btnRose} onClick={showMoreStories}>
           Voir plus d'histoires
         </button>

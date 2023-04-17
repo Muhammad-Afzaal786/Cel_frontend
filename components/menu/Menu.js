@@ -1,22 +1,22 @@
-import React from 'react';
-import Image from 'next/image';
-import { useContext, useState, useEffect } from 'react';
-import Link from 'next/link';
-import styles from './Menu.module.scss';
+import React from "react";
+import Image from "next/image";
+import { useContext, useState, useEffect } from "react";
+import Link from "next/link";
+import styles from "./Menu.module.scss";
 //
-import { AuthContext } from '../../context/auth.context';
-import { BreakPointContext } from '../../context/breakPoints.context';
+import { AuthContext } from "../../context/auth.context";
+import { BreakPointContext } from "../../context/breakPoints.context";
 //
-import Icon_connect from '../../public/assets/img/svgs/page-icons/icon-page-connect.svg';
-import Icon_home from '../../public/assets/img/svgs/menu-icons/icon-menu-home.svg';
-import Icon_theme from '../../public/assets/img/svgs/menu-icons/icon-menu-themes.svg';
-import Icon_abos from '../../public/assets/img/svgs/menu-icons/icon-menu-abonnements.svg';
-import Icon_aLaUne from '../../public/assets/img/svgs/menu-icons/icon-menu-une.svg';
-import Icon_close from '../../public/assets/img/svgs/page-icons/icon-page-close.svg';
-import Icon_writeMess from '../../public/assets/img/svgs/page-icons/icon-page-message-write.svg';
+import Icon_connect from "../../public/assets/img/svgs/page-icons/icon-page-connect.svg";
+import Icon_home from "../../public/assets/img/svgs/menu-icons/icon-menu-home.svg";
+import Icon_theme from "../../public/assets/img/svgs/menu-icons/icon-menu-themes.svg";
+import Icon_abos from "../../public/assets/img/svgs/menu-icons/icon-menu-abonnements.svg";
+import Icon_aLaUne from "../../public/assets/img/svgs/menu-icons/icon-menu-une.svg";
+import Icon_close from "../../public/assets/img/svgs/page-icons/icon-page-close.svg";
+import Icon_writeMess from "../../public/assets/img/svgs/page-icons/icon-page-message-write.svg";
 //
-import SignFormContainer from '../auth/SignFormContainer';
-import { signOut, useSession } from 'next-auth/react';
+import SignFormContainer from "../auth/SignFormContainer";
+import { signOut, useSession } from "next-auth/react";
 
 function Menu({ isOpen, toggleMenu }) {
   const { data: session } = useSession();
@@ -45,13 +45,14 @@ function Menu({ isOpen, toggleMenu }) {
     <>
       <nav
         className={`
-          ${styles.sideMenuContainer} ${isOpen ? styles.active : ''} ${
-          breakPoint === 'desktop'
+          ${styles.sideMenuContainer} ${isOpen ? styles.active : ""} ${
+          breakPoint === "desktop"
             ? // || breakPoint === 'laptop'
               styles.desktop
-            : ''
+            : ""
         }
-          `}>
+          `}
+      >
         <div className={styles.scrollContainer}>
           {isLoggedIn ? (
             <div className={`${styles.menuItemContainer} ${styles.first}`}>
@@ -62,7 +63,7 @@ function Menu({ isOpen, toggleMenu }) {
                       ? user.image
                       : `https://avatars.dicebear.com/api/adventurer/${user.username}.svg`
                   }
-                  alt=''
+                  alt=""
                   width={40}
                   height={40}
                 />
@@ -72,13 +73,14 @@ function Menu({ isOpen, toggleMenu }) {
           ) : (
             <div
               className={styles.menuLogin}
-              onClick={() => setDisplayForm(!displayForm)}>
+              onClick={() => setDisplayForm(!displayForm)}
+            >
               <Icon_connect className={styles.icon} />
               <p className={styles.p}>Connexion/Inscription</p>
             </div>
           )}
           <div className={styles.buttonContainer}>
-            <Link href='/story/create'>
+            <Link href="/story/create">
               <button className={styles.btnRose}>PUBLIER</button>
             </Link>
             {/* <button className={styles.btnTransparent}>MODÉRER</button> */}
@@ -86,7 +88,10 @@ function Menu({ isOpen, toggleMenu }) {
           <div className={styles.menuItemContainer}>
             <div className={styles.item}>
               <Icon_home className={styles.icon} />
-              <p className={styles.p}>Accueil</p>
+              {/* <p className={styles.p}>Accueil</p> */}
+              <Link href="/ContactUs">
+                <p className={styles.p}>Contact Us</p>
+              </Link>
             </div>
           </div>
           <div className={styles.menuItemContainer}>
@@ -107,7 +112,7 @@ function Menu({ isOpen, toggleMenu }) {
               <p className={styles.p}>À la une</p>
             </div>
           </div>
-          <Link href=''>
+          <Link href="">
             <div className={`${styles.buttonContainer} ${styles.messagerie} `}>
               <div className={styles.gauche}>
                 <Icon_writeMess className={styles.icon} />
@@ -122,19 +127,19 @@ function Menu({ isOpen, toggleMenu }) {
               </div>
             </div>
           </Link>
-          <Link href=''>
+          <Link href="">
             <div className={styles.bigButtonInMenu}>
               <p>TROUVER UN PROFESSIONNEL</p>
               <p>ou une association</p>
             </div>
           </Link>
-          <Link href=''>
+          <Link href="">
             <div className={`${styles.bigButtonInMenu} ${styles.espacePro}`}>
               <p>ESPACE PRO</p>
               <p>(médecin, psychologue, avocat...)</p>
             </div>
           </Link>
-          <Link href=''>
+          <Link href="">
             <div className={`${styles.bigButtonInMenu} ${styles.ressources}`}>
               <p>AUTRES RESSOURCES</p>
             </div>
@@ -144,7 +149,8 @@ function Menu({ isOpen, toggleMenu }) {
               className={`${styles.menuItemContainer} ${styles.logout}`}
               onClick={() => {
                 handleLogOut(user);
-              }}>
+              }}
+            >
               <div className={styles.item}>
                 <Icon_close className={styles.icon} />
                 <p className={styles.p}>Se déconnecter</p>
